@@ -1,0 +1,103 @@
+#!/bin/bash
+
+# ==========================================
+# 🔒 Hook de validação de Conventional Commits
+# Versão robusta - funciona no terminal e GitKraken Desktop
+# ==========================================
+
+echo "═════════════════════════════════════════════════════════════════════════════════"
+echo "🔒 Validação de Commit – Padrão Conventional Commits"
+echo "O Git verificará se sua mensagem de commit segue o padrão:"
+echo ""
+echo "        'type(scope): subject'"
+echo ""
+echo "Exemplo: 'fix(cadastro-psicologos): correção de número de psicólogos cadastrados'"
+echo ""
+echo "═════════════════════════════════════════════════════════════════════════════════"
+echo ""
+echo "🔍 VERIFICANDO..."
+
+# ==========================================
+# 🔍 Encontrar o Node.js em múltiplos caminhos
+# ==========================================
+
+NODE_FOUND=""
+
+# 1. Tentar encontrar node no PATH
+if command -v node &> /dev/null; then
+    NODE_FOUND=$(command -v node)
+fi
+
+# 2. Se não encontrou, buscar em caminhos comuns do nvm
+if [ -z "$NODE_FOUND" ]; then
+    # Buscar em todas as versões do nvm
+    for dir in "$HOME/.nvm/versions/node"/*/bin; do
+        if [ -x "$dir/node" ]; then
+            NODE_FOUND="$dir/node"
+            break
+        fi
+    done
+fi
+
+# 3. Caminhos específicos como fallback (mais comum no Linux/macOS)
+if [ -z "$NODE_FOUND" ]; then
+    for path in "/usr/bin/node" "/usr/local/bin/node" "$HOME/.local/bin/node"; do
+        if [ -x "$path" ]; then
+            NODE_FOUND="$path"
+            break
+        fi
+    done
+fi
+
+# 4. Se encontrou o Node, adicionar ao PATH e executar
+if [ -n "$NODE_FOUND" ]; then
+    NODE_DIR=$(dirname "$NODE_FOUND")
+    export PATH="$NODE_DIR:$PATH"
+fi
+
+# ==========================================
+# ⚙️ Tentar executar o commitlint
+# ==========================================
+
+# Tentar primeiro executar diretamente (funciona se Node estiver no PATH)
+./node_modules/.bin/commitlint --edit "$1" 2>&1
+RESULT=$?
+
+# Se falhou (código 127 = comando não encontrado), tentar com node explícito
+if [ $RESULT -eq 127 ] && [ -n "$NODE_FOUND" ]; then
+    $NODE_FOUND ./node_modules/.bin/commitlint --edit "$1" 2>&1
+    RESULT=$?
+fi
+
+echo ""
+echo "═════════════════════════════════════════════════════════════════════════════════"
+
+if [ $RESULT -eq 0 ]; then
+    echo "✅ Commit válido!"
+    echo "Seu commit segue o padrão Conventional Commits e foi salvo no repositório!"
+else
+    echo "❌ Commit inválido!"
+    echo ""
+    if [ -z "$NODE_FOUND" ]; then
+        echo "⚠️ Node.js não foi encontrado!"
+        echo ""
+        echo "Para resolver no GitKraken:"
+        echo "1. Preferences > Git Hooks > configure o caminho dos hooks"
+        echo "OU"
+        echo "2. Use a opção 'Commit and skip hooks' ao fazer o commit"
+    fi
+    echo "📝 Como corrigir:"
+    echo "   Use: git commit -m \"tipo(escopo): descrição\""
+    echo "   Exemplos:"
+    echo "     feat(buttons): adiciona botão"
+    echo "     fix(ui): corrige bug"
+    echo "     chore(root): adiciona .gitignore"
+    echo ""
+    echo "Ou utilize o comando 'pnpm commitzen'"
+    echo "para acessar um passo-a-passo de como fazer um commit"
+fi
+
+echo "═════════════════════════════════════════════════════════════════════════════════"
+echo ""
+
+exit $RESULT
