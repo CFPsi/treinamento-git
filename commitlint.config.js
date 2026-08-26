@@ -78,11 +78,11 @@ export default {
 						title: 'Builds',
 						emoji: '🛠'
 					},
-					// ci: {
-					// 	description: 'Mudanças nos arquivos de configuração do CI (Travis, Circle, etc)',
-					// 	title: 'Integração Contínua',
-					// 	emoji: '⚙️'
-					// },
+					ci: {
+						description: 'Mudanças nos arquivos de configuração do CI (Travis, Circle, etc)',
+						title: 'Integração Contínua',
+						emoji: '⚙️'
+					},
 					chore: {
 						description: 'Outras mudanças que não modificam arquivos src ou test',
 						title: 'Tarefas',
