@@ -5,6 +5,30 @@
 # Versão robusta - funciona no terminal e GitKraken Desktop
 # ==========================================
 
+# ==========================================
+# 🔒 Bloqueio de commits diretos na branch main
+# ==========================================
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+COMMIT_MSG=$(cat "$1")
+
+# Verifica se há um merge em andamento
+MERGE_HEAD_FILE="$(git rev-parse --git-dir)/MERGE_HEAD"
+
+if [ "$BRANCH" = "main" ]; then
+  if [ ! -f "$MERGE_HEAD_FILE" ]; then
+    if echo "$COMMIT_MSG" | grep -q "chore(release)"; then
+        echo "✅ Commit de release permitido na branch main."
+    else
+        echo ""
+        echo "🚫 ERRO: Commit direto na branch '$BRANCH' não é permitido!"
+        echo "💡 Crie uma branch (ex: git checkout -b feature/nova-funcionalidade) e depois faça o merge para a branch main."
+        echo ""
+        exit 1
+    fi
+  fi
+fi
+
 echo "═════════════════════════════════════════════════════════════════════════════════"
 echo "🔒 Validação de Commit – Padrão Conventional Commits"
 echo "O Git verificará se sua mensagem de commit segue o padrão:"
