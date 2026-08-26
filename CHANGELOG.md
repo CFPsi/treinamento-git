@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/CFPsi/treinamento-git/compare/v1.0.0...v1.0.1) (2026-08-26)
+
+
+### Bug Fixes
+
+* **pagina-inicial:** corrige nome do Leo na equipe ([1bf2a18](https://github.com/CFPsi/treinamento-git/commit/1bf2a18359466b5d23019bc5fc4eb4a75a77459b))
+* **pagina-inicial:** corrige o nome do Ricardo na equipe ([b6b77d6](https://github.com/CFPsi/treinamento-git/commit/b6b77d6d879f8cc228284298116b3153fa2497b5))
+
 # 1.0.0 (2026-08-25)
 
 
