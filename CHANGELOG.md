@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/CFPsi/treinamento-git/compare/v1.0.1...v1.0.2) (2026-08-28)
+
+
+### Bug Fixes
+
+* **pagina-inicial:** corrige nome do marcio na equipe ([e85a677](https://github.com/CFPsi/treinamento-git/commit/e85a677926682865b4f315e23c19c8685a1d36f2))
+
 ## [1.0.1](https://github.com/CFPsi/treinamento-git/compare/v1.0.0...v1.0.1) (2026-08-26)
 
 
