@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/CFPsi/treinamento-git/compare/v1.0.1...v1.0.2) (2026-08-28)
+
+
+### Bug Fixes
+
+* **pagina-inicia:** corrige nome da ivan na equipe ([62e0d96](https://github.com/CFPsi/treinamento-git/commit/62e0d9676429d5eb3ecefd193171d8946d643539))
+
 ## [1.0.1](https://github.com/CFPsi/treinamento-git/compare/v1.0.0...v1.0.1) (2026-08-26)
 
 
