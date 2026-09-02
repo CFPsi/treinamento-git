@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/CFPsi/treinamento-git/compare/v1.0.4...v1.0.5) (2026-09-02)
+
+
+### Bug Fixes
+
+* **pagina-inicial:** corrige nome do DeJairo na lista ([8b18ceb](https://github.com/CFPsi/treinamento-git/commit/8b18ceba511c3e12fc874f0f631fa731d0951542))
+
 ## [1.0.4](https://github.com/CFPsi/treinamento-git/compare/v1.0.3...v1.0.4) (2026-09-02)
 
 
