@@ -1,9 +1,25 @@
-## [1.0.2](https://github.com/CFPsi/treinamento-git/compare/v1.0.1...v1.0.2) (2026-08-28)
+## [1.0.5](https://github.com/CFPsi/treinamento-git/compare/v1.0.4...v1.0.5) (2026-09-02)
 
 
 ### Bug Fixes
 
+* **pagina-inicial:** corrige nome do DeJairo na lista ([8b18ceb](https://github.com/CFPsi/treinamento-git/commit/8b18ceba511c3e12fc874f0f631fa731d0951542))
+
+## [1.0.4](https://github.com/CFPsi/treinamento-git/compare/v1.0.3...v1.0.4) (2026-09-02)
+
+
+### Bug Fixes
+
+* **pagina-inicial:** corrige nome do márcio ([e997774](https://github.com/CFPsi/treinamento-git/commit/e997774818939c435a76b3f0e6b33441678bf4ec))
+
+## [1.0.3](https://github.com/CFPsi/treinamento-git/compare/v1.0.2...v1.0.3) (2026-08-28)
+
+
+### Bug Fixes
+
+* **pagina-inicia:** corrige nome da ivan na equipe ([0db8f88](https://github.com/CFPsi/treinamento-git/commit/0db8f8827e9eb860b44c988035cfee9eeb9ca1a8))
 * **pagina-inicial:** corrige nome do marcio na equipe ([e85a677](https://github.com/CFPsi/treinamento-git/commit/e85a677926682865b4f315e23c19c8685a1d36f2))
+* **pagina-inicial:** corrige nome do marcos na equipe ([c307233](https://github.com/CFPsi/treinamento-git/commit/c307233b896661f6809a25e57ce9d6df72845ce3))
 * **pagina-inicial:** corrige nome do Rafael ([fd21e2a](https://github.com/CFPsi/treinamento-git/commit/fd21e2a1b6e3970c4429f134247687aae0cf752b))
 
 ## [1.0.2](https://github.com/CFPsi/treinamento-git/compare/v1.0.1...v1.0.2) (2026-08-28)
@@ -11,7 +27,9 @@
 
 ### Bug Fixes
 
+* **pagina-inicia:** corrige nome da ivan na equipe ([62e0d96](https://github.com/CFPsi/treinamento-git/commit/62e0d9676429d5eb3ecefd193171d8946d643539))
 * **pagina-inicial:** corrige nome do marcio na equipe ([e85a677](https://github.com/CFPsi/treinamento-git/commit/e85a677926682865b4f315e23c19c8685a1d36f2))
+* **pagina-inicial:** corrige nome do Rafael ([fd21e2a](https://github.com/CFPsi/treinamento-git/commit/fd21e2a1b6e3970c4429f134247687aae0cf752b))
 
 ## [1.0.1](https://github.com/CFPsi/treinamento-git/compare/v1.0.0...v1.0.1) (2026-08-26)
 
