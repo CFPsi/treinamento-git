@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/CFPsi/treinamento-git/compare/v1.0.3...v1.0.4) (2026-09-02)
+
+
+### Bug Fixes
+
+* **pagina-inicial:** corrige nome do márcio ([e997774](https://github.com/CFPsi/treinamento-git/commit/e997774818939c435a76b3f0e6b33441678bf4ec))
+
 ## [1.0.3](https://github.com/CFPsi/treinamento-git/compare/v1.0.2...v1.0.3) (2026-08-28)
 
 
