@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/CFPsi/treinamento-git/compare/v1.0.5...v1.0.6) (2026-09-02)
+
+
+### Bug Fixes
+
+* **pagina-inicial:** corrige nome marcos ([34d803a](https://github.com/CFPsi/treinamento-git/commit/34d803ab7036d3c6348520ab9453546b2628f0ce))
+
 ## [1.0.5](https://github.com/CFPsi/treinamento-git/compare/v1.0.4...v1.0.5) (2026-09-02)
 
 
