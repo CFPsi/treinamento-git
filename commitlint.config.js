@@ -19,6 +19,8 @@ export default {
 
     // Garante que o corpo e o rodapé seguem boas práticas opcionais
     'body-leading-blank': [1, 'always'],
+		'body-max-length': [2, 'always', Infinity],
+		'body-max-line-length': [2, 'always', Infinity],
     'footer-leading-blank': [1, 'always'],
   },
 	prompt: {
