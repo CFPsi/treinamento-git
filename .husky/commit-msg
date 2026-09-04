@@ -15,7 +15,7 @@ COMMIT_MSG=$(cat "$1")
 # Verifica se há um merge em andamento
 MERGE_HEAD_FILE="$(git rev-parse --git-dir)/MERGE_HEAD"
 
-if [ "$BRANCH" = "main" ]; then
+if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then
   if [ ! -f "$MERGE_HEAD_FILE" ]; then
     if echo "$COMMIT_MSG" | grep -q "chore(release)"; then
         echo "✅ Commit de release permitido na branch main."
